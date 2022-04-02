@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logo"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teams_list"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/row_teams"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/final_list_layout"
+        android:visibility="gone"
+        android:src="@drawable/logo"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/final_list_layout"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/first_position_title"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:text="@string/first_position"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sp"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/first_position_team"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/first_position_team"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sp"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/second_position_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first_position_title"/>
+
+        <TextView
+            android:id="@+id/second_position_title"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_40dp"
+            android:text="@string/second_position"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sp"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/second_position_team"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first_position_team"/>
+
+        <TextView
+            android:id="@+id/second_position_team"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sp"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/third_position_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/second_position_title"/>
+
+        <TextView
+            android:id="@+id/third_position_title"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_40dp"
+            android:visibility="gone"
+            android:text="@string/third_position"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sp"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/third_position_team"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/second_position_team"/>
+
+        <TextView
+            android:id="@+id/third_position_team"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sp"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/third_position_note"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/third_position_title"/>
+
+        <TextView
+            android:id="@+id/third_position_note"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_40dp"
+            android:text="@string/third_position_note"
+            android:textStyle="bold"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/ok"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/third_position_team"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ok"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            android:text="@string/ok"
+            app:layout_constraintRight_toRightOf="@+id/third_position_note"
+            app:layout_constraintTop_toBottomOf="@+id/third_position_note"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ignore"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/purple_500"
+            android:gravity="center"
+            android:text="@string/ignore"
+            app:layout_constraintRight_toLeftOf="@+id/ok"
+            app:layout_constraintTop_toBottomOf="@+id/third_position_note"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/action_button"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10dp"
+        android:text="@string/start_ipl"
+        android:textColor="@color/white"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
